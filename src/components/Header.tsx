@@ -23,10 +23,10 @@ const Header: React.FC = () => {
 
                 {/* Desktop Menu */}
                 <nav className="desktop-menu" style={{ display: 'none' }}>
-                    <a href="#ev-chargers" style={{ marginLeft: '2rem', color: '#fff', fontWeight: 500 }}>Lataus</a>
-                    <a href="#air-conditioners" style={{ marginLeft: '2rem', color: '#fff', fontWeight: 500 }}>Ilmalämpöpumput</a>
-                    <a href="#smart-home" style={{ marginLeft: '2rem', color: '#fff', fontWeight: 500 }}>Älykoti</a>
-                    <a href="#contact" className="btn" style={{ marginLeft: '2rem', padding: '0.5rem 1rem' }}>Ota yhteyttä</a>
+                    <Link to="/ev-charging" style={{ marginLeft: '2rem', color: '#fff', fontWeight: 500, textDecoration: 'none' }}>Lataus</Link>
+                    <a href="/#air-conditioners" style={{ marginLeft: '2rem', color: '#fff', fontWeight: 500 }}>Ilmalämpöpumput</a>
+                    <a href="/#smart-home" style={{ marginLeft: '2rem', color: '#fff', fontWeight: 500 }}>Älykoti</a>
+                    <a href="/#contact" className="btn" style={{ marginLeft: '2rem', padding: '0.5rem 1rem' }}>Ota yhteyttä</a>
                 </nav>
 
                 {/* Mobile Menu Button */}
@@ -53,10 +53,10 @@ const Header: React.FC = () => {
                     gap: '1.5rem',
                     borderBottom: '2px solid var(--accent-color)'
                 }}>
-                    <a href="#ev-chargers" onClick={() => setIsOpen(false)} style={{ color: '#fff', fontSize: '1.2rem' }}>Lataus</a>
-                    <a href="#air-conditioners" onClick={() => setIsOpen(false)} style={{ color: '#fff', fontSize: '1.2rem' }}>Ilmalämpöpumput</a>
-                    <a href="#smart-home" onClick={() => setIsOpen(false)} style={{ color: '#fff', fontSize: '1.2rem' }}>Älykoti</a>
-                    <a href="#contact" onClick={() => setIsOpen(false)} className="btn" style={{ textAlign: 'center' }}>Ota yhteyttä</a>
+                    <Link to="/ev-charging" onClick={() => setIsOpen(false)} style={{ color: '#fff', fontSize: '1.2rem', textDecoration: 'none' }}>Lataus</Link>
+                    <a href="/#air-conditioners" onClick={() => setIsOpen(false)} style={{ color: '#fff', fontSize: '1.2rem' }}>Ilmalämpöpumput</a>
+                    <a href="/#smart-home" onClick={() => setIsOpen(false)} style={{ color: '#fff', fontSize: '1.2rem' }}>Älykoti</a>
+                    <a href="/#contact" onClick={() => setIsOpen(false)} className="btn" style={{ textAlign: 'center' }}>Ota yhteyttä</a>
                 </div>
             )}
 
