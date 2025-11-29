@@ -89,8 +89,10 @@ const Hero: React.FC = () => {
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text',
+                    color: 'transparent',
                     fontWeight: 700,
-                    animationDelay: '0.2s'
+                    animationDelay: '0.2s',
+                    textAlign: 'center'
                 }}>
                     {content.hero.title}
                 </h1>

@@ -2,24 +2,24 @@ import type { SiteContent } from '../types';
 
 export const defaultContent: SiteContent = {
     hero: {
-        title: "BASIC ELECTRIC",
-        subtitle: "Sähköalan ammattilainen palveluksessasi",
+        title: "Sähköasentaja Riihimäki",
+        subtitle: "Ammattitaitoinen sähkömies ja sähköasentaja Riihimäellä. Sähköasennukset, ilmalämpöpumput ja sähköautolataus.",
     },
     sections: {
         ev: {
             id: "ev-chargers",
-            title: "Sähköautolataus",
-            content: "Sähköauton lataukseen tarkoitettu latauspiste on turvallinen valinta. Se on palo- ja henkilöturvallinen. Tavallinen pistorasia voi pitkäaikaisessa latauskäytössä vaurioitua tai jopa sulaa sekä aiheuttaa henkilövahinkoja. Latauspisteen avulla varmistat, että akku on yön aikana latautunut täyteen."
+            title: "Sähköautolataus Riihimäki",
+            content: "Sähköauton lataukseen tarkoitettu latauspiste on turvallinen valinta. Palvelemme Riihimäkeä ja lähialueita. Latauspiste on palo- ja henkilöturvallinen. Tavallinen pistorasia voi pitkäaikaisessa latauskäytössä vaurioitua tai jopa sulaa. Latauspisteen avulla varmistat, että akku on yön aikana latautunut täyteen."
         },
         ac: {
             id: "air-conditioners",
-            title: "Ilmalämpöpumput",
-            content: "Ilmalämpöpumppu on erinomainen tapa säästää lämmityskustannuksissa ja viilentää kotiasi kesähelteillä. Tarjoamme asennukset ja huollot ammattitaidolla. Muista, että kotitalouksissa ilmalämpöpumpun huolto kannattaa suorittaa säännöllisesti laitteen toimintakyvyn varmistamiseksi."
+            title: "Ilmalämpöpumput Riihimäki",
+            content: "Ilmalämpöpumpun asennus Riihimäellä ammattitaidolla. Ilmalämpöpumppu on erinomainen tapa säästää lämmityskustannuksissa ja viilentää kotiasi kesähelteillä. Tarjoamme asennukset ja huollot koko Riihimäen alueella. Kotitalouksissa ilmalämpöpumpun huolto kannattaa suorittaa säännöllisesti."
         },
         smartHome: {
             id: "smart-home",
-            title: "Älykoti & Energiakonsultointi",
-            content: "Tuo kotisi nykyaikaan älykkäillä automaatioratkaisuilla. Autamme sinua optimoimaan energiankulutuksesi ja tekemään asumisesta mukavampaa ja ekologisempaa. Kysy lisää energiakonsultoinnista!"
+            title: "Sähkötyöt Riihimäki",
+            content: "Kaikki sähkötyöt Riihimäellä ja lähialueilla. Sähköasennukset, valaistusratkaisut, saneeraukset ja huollot. Älykoti-automaatioratkaisut ja energiakonsultointi. Autamme sinua optimoimaan energiankulutuksesi ja tekemään asumisesta mukavampaa."
         }
     },
     owners: [
