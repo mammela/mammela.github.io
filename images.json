@@ -1,0 +1,126 @@
+{
+    "manifest_version": "1.0",
+    "generated_date": "2025-11-29",
+    "images": [
+        {
+            "page": "EVCharging",
+            "url": "https://images.unsplash.com/photo-1593941707882-a5bba14938c7",
+            "alt": "Sähköauton lataus",
+            "source": "Unsplash",
+            "license": "Unsplash License (Free to use)",
+            "sizes": [
+                "w=1920 (hero)",
+                "w=1000",
+                "w=800"
+            ],
+            "loading": "eager",
+            "purpose": "Hero background image"
+        },
+        {
+            "page": "EVCharging",
+            "url": "https://images.unsplash.com/photo-1621255536412-421429402509",
+            "alt": "Kotilataus",
+            "source": "Unsplash",
+            "license": "Unsplash License (Free to use)",
+            "sizes": [
+                "w=1000"
+            ],
+            "loading": "lazy",
+            "purpose": "Home charging solution illustration"
+        },
+        {
+            "page": "EVCharging",
+            "url": "https://images.unsplash.com/photo-1565514020176-db7933f8206d",
+            "alt": "Taloyhtiölataus",
+            "source": "Unsplash",
+            "license": "Unsplash License (Free to use)",
+            "sizes": [
+                "w=1000"
+            ],
+            "loading": "lazy",
+            "purpose": "Housing association charging solution"
+        },
+        {
+            "page": "ElectricalServices",
+            "url": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e",
+            "alt": "Sähkötyöt",
+            "source": "Unsplash",
+            "license": "Unsplash License (Free to use)",
+            "sizes": [
+                "w=1920 (hero)"
+            ],
+            "loading": "eager",
+            "purpose": "Hero background image"
+        },
+        {
+            "page": "ElectricalServices",
+            "url": "https://images.unsplash.com/photo-1558402529-d2638a7023e9",
+            "alt": "Sähköasentaja työssä",
+            "source": "Unsplash",
+            "license": "Unsplash License (Free to use)",
+            "sizes": [
+                "w=800"
+            ],
+            "loading": "lazy",
+            "purpose": "Electrician at work showcase"
+        },
+        {
+            "page": "ElectricalServices",
+            "url": "https://images.unsplash.com/photo-1565514020176-db7933f8206d",
+            "alt": "Moderni valaistus",
+            "source": "Unsplash",
+            "license": "Unsplash License (Free to use)",
+            "sizes": [
+                "w=800"
+            ],
+            "loading": "lazy",
+            "purpose": "Modern lighting installation"
+        },
+        {
+            "page": "ElectricalServices",
+            "url": "https://images.unsplash.com/photo-1497366216548-37526070297c",
+            "alt": "Toimiston sähköistys",
+            "source": "Unsplash",
+            "license": "Unsplash License (Free to use)",
+            "sizes": [
+                "w=800"
+            ],
+            "loading": "lazy",
+            "purpose": "Office electrical work"
+        },
+        {
+            "page": "HeatPumps",
+            "url": "https://images.unsplash.com/photo-1614631446501-abcf76949734",
+            "alt": "Ilmalämpöpumppu",
+            "source": "Unsplash",
+            "license": "Unsplash License (Free to use)",
+            "sizes": [
+                "w=1920 (hero)"
+            ],
+            "loading": "eager",
+            "purpose": "Hero background image"
+        },
+        {
+            "page": "HeatPumps",
+            "url": "https://images.unsplash.com/photo-1558002038-1091a166111c",
+            "alt": "Ilmalämpöpumppu asennettuna",
+            "source": "Unsplash",
+            "license": "Unsplash License (Free to use)",
+            "sizes": [
+                "w=1000"
+            ],
+            "loading": "lazy",
+            "purpose": "Installed heat pump illustration"
+        }
+    ],
+    "optimization_notes": {
+        "format": "All images use Unsplash's automatic WebP conversion when supported by browser",
+        "responsive": "Images use srcset-like URL parameters (w=) for different viewport sizes",
+        "lazy_loading": "All non-hero images use loading='lazy' attribute",
+        "accessibility": "All images have descriptive alt text in Finnish"
+    },
+    "attribution": {
+        "unsplash": "Photos from Unsplash.com - Free to use under the Unsplash License",
+        "license_url": "https://unsplash.com/license"
+    }
+}

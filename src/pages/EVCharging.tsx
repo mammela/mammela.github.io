@@ -31,22 +31,31 @@ const EVCharging: React.FC = () => {
                     </div>
                 </section>
 
-                {/* Info Section */}
+                {/* Why Get a Charging Station - from basicelectric.fi */}
                 <section style={{ padding: '5rem 0', backgroundColor: '#121212' }}>
                     <div className="container">
+                        <h2 style={{ fontSize: '2.5rem', textAlign: 'center', marginBottom: '2rem', color: '#fff' }}>
+                            Miksi hankkia sähköauton latauspiste?
+                        </h2>
+                        <p style={{ textAlign: 'center', fontSize: '0.9rem', color: '#888', marginBottom: '3rem' }}>
+                            Lähde: <a href="https://basicelectric.fi/saumlhkoumlautolataus.html" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-color)' }}>Basic Electric Oy</a>
+                        </p>
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem' }}>
                             <div style={{ padding: '2rem', backgroundColor: '#1a1a1a', borderRadius: '15px', border: '1px solid #333' }}>
                                 <Shield size={48} color="var(--accent-color)" style={{ marginBottom: '1.5rem' }} />
                                 <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: '#fff' }}>Turvallisuus edellä</h3>
-                                <p style={{ color: '#aaa', lineHeight: '1.6' }}>
-                                    Latausasemamme on suunniteltu kestämään pohjoisen vaativat olosuhteet. Ne täyttävät kaikki turvallisuusstandardit ja suojaavat sekä autoa että kiinteistöä.
+                                <p style={{ color: '#aaa', lineHeight: '1.6', marginBottom: '1rem' }}>
+                                    Sähköauton lataukseen tarkoitettu latauspiste on turvallinen valinta. Se on palo- ja henkilöturvallinen.
+                                </p>
+                                <p style={{ color: '#ccc', lineHeight: '1.6', fontStyle: 'italic' }}>
+                                    Tavallinen pistorasia voi pitkäaikaisessa latauskäytössä vaurioitua tai jopa sulaa sekä aiheuttaa henkilövahinkoja.
                                 </p>
                             </div>
                             <div style={{ padding: '2rem', backgroundColor: '#1a1a1a', borderRadius: '15px', border: '1px solid #333' }}>
                                 <Zap size={48} color="var(--accent-color)" style={{ marginBottom: '1.5rem' }} />
-                                <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: '#fff' }}>Nopea lataus</h3>
+                                <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: '#fff' }}>Täysi akku aamulla</h3>
                                 <p style={{ color: '#aaa', lineHeight: '1.6' }}>
-                                    Hyödynnä kiinteistösi koko kapasiteetti dynaamisella kuormanhallinnalla. Lataa autosi nopeasti ja turvallisesti ilman sulakkeiden palamista.
+                                    Latauspisteen avulla varmistat, että akku on yön aikana latautunut täyteen. Hyödynnä kiinteistösi koko kapasiteetti dynaamisella kuormanhallinnalla.
                                 </p>
                             </div>
                             <div style={{ padding: '2rem', backgroundColor: '#1a1a1a', borderRadius: '15px', border: '1px solid #333' }}>
@@ -66,14 +75,14 @@ const EVCharging: React.FC = () => {
                         <h2 style={{ fontSize: '2.5rem', textAlign: 'center', marginBottom: '4rem', color: '#fff' }}>
                             Ratkaisut jokaiseen tarpeeseen
                         </h2>
-                        
+
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '4rem' }}>
                             {/* Home Charging */}
                             <div style={{ display: 'flex', alignItems: 'center', gap: '4rem', flexWrap: 'wrap' }}>
                                 <div style={{ flex: 1, minWidth: '300px' }}>
-                                    <img 
-                                        src="https://images.unsplash.com/photo-1621255536412-421429402509?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
-                                        alt="Kotilataus" 
+                                    <img
+                                        src="https://images.unsplash.com/photo-1621255536412-421429402509?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                                        alt="Kotilataus"
                                         style={{ width: '100%', borderRadius: '20px', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }}
                                     />
                                 </div>
@@ -124,9 +133,9 @@ const EVCharging: React.FC = () => {
                                 <div style={{ flex: 1, minWidth: '300px' }}>
                                     <div style={{ position: 'relative' }}>
                                         <Building2 size={64} color="var(--accent-color)" style={{ position: 'absolute', top: '-32px', right: '-32px', zIndex: 10, filter: 'drop-shadow(0 0 10px rgba(0,0,0,0.5))' }} />
-                                        <img 
-                                            src="https://images.unsplash.com/photo-1565514020176-db7933f8206d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
-                                            alt="Taloyhtiölataus" 
+                                        <img
+                                            src="https://images.unsplash.com/photo-1565514020176-db7933f8206d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                                            alt="Taloyhtiölataus"
                                             style={{ width: '100%', borderRadius: '20px', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }}
                                         />
                                     </div>

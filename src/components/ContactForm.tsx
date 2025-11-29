@@ -53,7 +53,16 @@ const ContactForm: React.FC = () => {
                             ))}
                         </div>
                         <div style={{ marginTop: '2rem' }}>
-                            <p style={{ color: '#ccc' }}>Sähköposti: <a href={`mailto:${content.contactEmail}`}>{content.contactEmail}</a></p>
+                            <h4 style={{ color: 'var(--accent-color)', marginBottom: '1rem' }}>Yhteystiedot</h4>
+                            <p style={{ color: '#ccc', marginBottom: '0.5rem' }}>
+                                <strong>Puhelin:</strong> <a href="tel:+358504064664" style={{ color: '#fff', textDecoration: 'none' }}>050 406 4664</a>
+                            </p>
+                            <p style={{ color: '#ccc', marginBottom: '0.5rem' }}>
+                                <strong>Instagram:</strong> <a href="https://instagram.com/basicelectric_oy" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none' }}>@basicelectric_oy</a>
+                            </p>
+                            <p style={{ color: '#888', fontSize: '0.9rem', marginTop: '1rem', fontStyle: 'italic' }}>
+                                Käytä yhteydenottolomaketta tai soita suoraan!
+                            </p>
                         </div>
                     </div>
 
