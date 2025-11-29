@@ -7,6 +7,10 @@
   --font-main: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -31,7 +35,12 @@ a:hover {
   color: var(--accent-hover);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: #fff;
   font-weight: 700;
   line-height: 1.2;
@@ -103,7 +112,8 @@ button {
   border-color: var(--accent-color);
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   padding: 1rem;
   background-color: #2a2a2a;
@@ -114,7 +124,8 @@ input, textarea {
   font-family: inherit;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   outline: none;
   border-color: var(--accent-color);
   box-shadow: 0 0 5px rgba(57, 255, 20, 0.5);
@@ -122,12 +133,89 @@ input:focus, textarea:focus {
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .animate-fade-in {
   animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.6s ease-out forwards;
+}
+
+/* Scroll Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Responsive Design - Mobile First */
@@ -219,4 +307,3 @@ img[loading="lazy"] {
 img[loading="lazy"].loaded {
   opacity: 1;
 }
-
