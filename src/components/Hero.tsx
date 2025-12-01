@@ -116,29 +116,49 @@ const Hero: React.FC = () => {
                     justifyContent: 'center',
                     flexWrap: 'wrap'
                 }}>
-                    <a href="#contact" className="btn btn-primary btn-hero">
+                    <a
+                        onClick={(e) => {
+                            e.preventDefault();
+                            document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                        }}
+                        className="btn btn-primary btn-hero"
+                        style={{ cursor: 'pointer' }}
+                    >
                         Pyydä tarjous
                     </a>
-                    <a href="#services" className="btn btn-secondary btn-hero">
+                    <a
+                        onClick={(e) => {
+                            e.preventDefault();
+                            document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+                        }}
+                        className="btn btn-secondary btn-hero"
+                        style={{ cursor: 'pointer' }}
+                    >
                         Palvelumme
                     </a>
                 </div>
             </div>
 
             {/* Scroll Indicator */}
-            <a href="#services" style={{
-                position: 'absolute',
-                bottom: '30px',
-                left: '50%',
-                transform: 'translateX(-50%)',
-                color: 'var(--accent-color)',
-                animation: 'bounce 2s infinite',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                textDecoration: 'none',
-                gap: '0.5rem'
-            }}>
+            <a
+                onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                style={{
+                    position: 'absolute',
+                    bottom: '30px',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    color: 'var(--accent-color)',
+                    animation: 'bounce 2s infinite',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    textDecoration: 'none',
+                    gap: '0.5rem',
+                    cursor: 'pointer'
+                }}>
 
             </a>
 
