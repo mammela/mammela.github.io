@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useContent } from '../context/ContentContext';
-import { ChevronDown } from 'lucide-react';
+
 
 const Hero: React.FC = () => {
     const { content } = useContent();
