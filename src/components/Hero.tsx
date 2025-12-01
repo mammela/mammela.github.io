@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
 
     return (
         <section style={{
-            height: '100vh',
+            height: '120vh',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -139,8 +139,7 @@ const Hero: React.FC = () => {
                 textDecoration: 'none',
                 gap: '0.5rem'
             }}>
-                <span style={{ fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '2px' }}>Scroll</span>
-                <ChevronDown size={40} />
+
             </a>
 
             <style>{`

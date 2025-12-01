@@ -149,6 +149,37 @@ const AdminPanel: React.FC = () => {
                                 value={editedContent.sections.ev.content}
                                 onChange={e => setEditedContent({ ...editedContent, sections: { ...editedContent.sections, ev: { ...editedContent.sections.ev, content: e.target.value } } })}
                             />
+                            <label>Kuva</label>
+                            <div style={{ display: 'flex', gap: '1rem', alignItems: 'center', marginTop: '0.5rem' }}>
+                                <img src={editedContent.sections.ev.image || '/placeholder-1.png'} alt="Preview" style={{ width: '100px', height: '60px', objectFit: 'cover', borderRadius: '4px' }} />
+                                <input
+                                    type="file"
+                                    accept="image/*"
+                                    onChange={(e) => {
+                                        const file = e.target.files?.[0];
+                                        if (file) {
+                                            const reader = new FileReader();
+                                            reader.onloadend = () => {
+                                                setEditedContent(prev => ({
+                                                    ...prev,
+                                                    sections: {
+                                                        ...prev.sections,
+                                                        ev: { ...prev.sections.ev, image: reader.result as string }
+                                                    }
+                                                }));
+                                            };
+                                            reader.readAsDataURL(file);
+                                        }
+                                    }}
+                                />
+                                <button
+                                    onClick={() => setEditedContent(prev => ({ ...prev, sections: { ...prev.sections, ev: { ...prev.sections.ev, image: '/placeholder-1.png' } } }))}
+                                    className="btn"
+                                    style={{ fontSize: '0.8rem', padding: '0.5rem' }}
+                                >
+                                    Palauta oletus
+                                </button>
+                            </div>
                         </div>
 
                         <div style={{ marginBottom: '2rem' }}>
@@ -164,6 +195,37 @@ const AdminPanel: React.FC = () => {
                                 value={editedContent.sections.ac.content}
                                 onChange={e => setEditedContent({ ...editedContent, sections: { ...editedContent.sections, ac: { ...editedContent.sections.ac, content: e.target.value } } })}
                             />
+                            <label>Kuva</label>
+                            <div style={{ display: 'flex', gap: '1rem', alignItems: 'center', marginTop: '0.5rem' }}>
+                                <img src={editedContent.sections.ac.image || '/placeholder-2.png'} alt="Preview" style={{ width: '100px', height: '60px', objectFit: 'cover', borderRadius: '4px' }} />
+                                <input
+                                    type="file"
+                                    accept="image/*"
+                                    onChange={(e) => {
+                                        const file = e.target.files?.[0];
+                                        if (file) {
+                                            const reader = new FileReader();
+                                            reader.onloadend = () => {
+                                                setEditedContent(prev => ({
+                                                    ...prev,
+                                                    sections: {
+                                                        ...prev.sections,
+                                                        ac: { ...prev.sections.ac, image: reader.result as string }
+                                                    }
+                                                }));
+                                            };
+                                            reader.readAsDataURL(file);
+                                        }
+                                    }}
+                                />
+                                <button
+                                    onClick={() => setEditedContent(prev => ({ ...prev, sections: { ...prev.sections, ac: { ...prev.sections.ac, image: '/placeholder-2.png' } } }))}
+                                    className="btn"
+                                    style={{ fontSize: '0.8rem', padding: '0.5rem' }}
+                                >
+                                    Palauta oletus
+                                </button>
+                            </div>
                         </div>
 
                         <div style={{ marginBottom: '2rem' }}>
@@ -179,6 +241,122 @@ const AdminPanel: React.FC = () => {
                                 value={editedContent.sections.smartHome.content}
                                 onChange={e => setEditedContent({ ...editedContent, sections: { ...editedContent.sections, smartHome: { ...editedContent.sections.smartHome, content: e.target.value } } })}
                             />
+                            <label>Kuva</label>
+                            <div style={{ display: 'flex', gap: '1rem', alignItems: 'center', marginTop: '0.5rem' }}>
+                                <img src={editedContent.sections.smartHome.image || '/placeholder-3.png'} alt="Preview" style={{ width: '100px', height: '60px', objectFit: 'cover', borderRadius: '4px' }} />
+                                <input
+                                    type="file"
+                                    accept="image/*"
+                                    onChange={(e) => {
+                                        const file = e.target.files?.[0];
+                                        if (file) {
+                                            const reader = new FileReader();
+                                            reader.onloadend = () => {
+                                                setEditedContent(prev => ({
+                                                    ...prev,
+                                                    sections: {
+                                                        ...prev.sections,
+                                                        smartHome: { ...prev.sections.smartHome, image: reader.result as string }
+                                                    }
+                                                }));
+                                            };
+                                            reader.readAsDataURL(file);
+                                        }
+                                    }}
+                                />
+                                <button
+                                    onClick={() => setEditedContent(prev => ({ ...prev, sections: { ...prev.sections, smartHome: { ...prev.sections.smartHome, image: '/placeholder-3.png' } } }))}
+                                    className="btn"
+                                    style={{ fontSize: '0.8rem', padding: '0.5rem' }}
+                                >
+                                    Palauta oletus
+                                </button>
+                            </div>
+                        </div>
+
+                        <div style={{ marginBottom: '2rem' }}>
+                            <h3>Tiimi</h3>
+                            {editedContent.owners.map((owner, index) => (
+                                <div key={index} style={{ marginBottom: '1.5rem', padding: '1rem', border: '1px solid #333', borderRadius: '8px' }}>
+                                    <h4 style={{ marginBottom: '1rem' }}>{owner.name}</h4>
+                                    <label>Nimi</label>
+                                    <input
+                                        value={owner.name}
+                                        onChange={e => {
+                                            const newOwners = [...editedContent.owners];
+                                            newOwners[index] = { ...newOwners[index], name: e.target.value };
+                                            setEditedContent({ ...editedContent, owners: newOwners });
+                                        }}
+                                    />
+                                    <label>Rooli</label>
+                                    <input
+                                        value={owner.role}
+                                        onChange={e => {
+                                            const newOwners = [...editedContent.owners];
+                                            newOwners[index] = { ...newOwners[index], role: e.target.value };
+                                            setEditedContent({ ...editedContent, owners: newOwners });
+                                        }}
+                                    />
+                                    <label>Puhelin</label>
+                                    <input
+                                        value={owner.phone || ''}
+                                        onChange={e => {
+                                            const newOwners = [...editedContent.owners];
+                                            newOwners[index] = { ...newOwners[index], phone: e.target.value };
+                                            setEditedContent({ ...editedContent, owners: newOwners });
+                                        }}
+                                    />
+                                    <label>Sähköposti</label>
+                                    <input
+                                        value={owner.email || ''}
+                                        onChange={e => {
+                                            const newOwners = [...editedContent.owners];
+                                            newOwners[index] = { ...newOwners[index], email: e.target.value };
+                                            setEditedContent({ ...editedContent, owners: newOwners });
+                                        }}
+                                    />
+                                    <label>Osoite/Info</label>
+                                    <input
+                                        value={owner.address || ''}
+                                        onChange={e => {
+                                            const newOwners = [...editedContent.owners];
+                                            newOwners[index] = { ...newOwners[index], address: e.target.value };
+                                            setEditedContent({ ...editedContent, owners: newOwners });
+                                        }}
+                                    />
+                                    <label>Kuva</label>
+                                    <div style={{ display: 'flex', gap: '1rem', alignItems: 'center', marginTop: '0.5rem' }}>
+                                        <img src={owner.imagePlaceholder} alt="Preview" style={{ width: '60px', height: '60px', objectFit: 'cover', borderRadius: '50%' }} />
+                                        <input
+                                            type="file"
+                                            accept="image/*"
+                                            onChange={(e) => {
+                                                const file = e.target.files?.[0];
+                                                if (file) {
+                                                    const reader = new FileReader();
+                                                    reader.onloadend = () => {
+                                                        const newOwners = [...editedContent.owners];
+                                                        newOwners[index] = { ...newOwners[index], imagePlaceholder: reader.result as string };
+                                                        setEditedContent({ ...editedContent, owners: newOwners });
+                                                    };
+                                                    reader.readAsDataURL(file);
+                                                }
+                                            }}
+                                        />
+                                        <button
+                                            onClick={() => {
+                                                const newOwners = [...editedContent.owners];
+                                                newOwners[index] = { ...newOwners[index], imagePlaceholder: `/owner-${index + 1}.png` };
+                                                setEditedContent({ ...editedContent, owners: newOwners });
+                                            }}
+                                            className="btn"
+                                            style={{ fontSize: '0.8rem', padding: '0.5rem' }}
+                                        >
+                                            Palauta oletus
+                                        </button>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
 
                         <div style={{ display: 'flex', gap: '1rem' }}>

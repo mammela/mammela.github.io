@@ -45,7 +45,7 @@ const Home: React.FC = () => {
                         <a href="/electrical-services" style={{ textDecoration: 'none' }}>
                             <div className="service-card">
                                 <div className="service-card-image" style={{
-                                    backgroundImage: 'url(https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80)',
+                                    backgroundImage: `url(${content.sections.smartHome.image || 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'})`,
                                     height: '200px',
                                     backgroundSize: 'cover',
                                     backgroundPosition: 'center',
@@ -53,10 +53,10 @@ const Home: React.FC = () => {
                                 }} />
                                 <div style={{ padding: '2rem' }}>
                                     <h3 style={{ color: 'var(--accent-color)', marginBottom: '1rem', fontSize: '1.5rem' }}>
-                                        Sähköpalvelut
+                                        {content.sections.smartHome.title}
                                     </h3>
                                     <p style={{ color: '#aaa', lineHeight: 1.6, marginBottom: '1.5rem' }}>
-                                        Sähköasennukset, valaistusratkaisut, saneeraukset ja huolto. Kaikki sähkötyöt ammattitaidolla.
+                                        {content.sections.smartHome.content.substring(0, 100)}...
                                     </p>
                                     <span className="service-link">Lue lisää →</span>
                                 </div>
@@ -67,7 +67,7 @@ const Home: React.FC = () => {
                         <a href="/ev-charging" style={{ textDecoration: 'none' }}>
                             <div className="service-card">
                                 <div className="service-card-image" style={{
-                                    backgroundImage: 'url(https://images.unsplash.com/photo-1593941707882-a5bba14938c7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80)',
+                                    backgroundImage: `url(${content.sections.ev.image || 'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'})`,
                                     height: '200px',
                                     backgroundSize: 'cover',
                                     backgroundPosition: 'center',
@@ -75,10 +75,10 @@ const Home: React.FC = () => {
                                 }} />
                                 <div style={{ padding: '2rem' }}>
                                     <h3 style={{ color: 'var(--accent-color)', marginBottom: '1rem', fontSize: '1.5rem' }}>
-                                        Sähköautolataus
+                                        {content.sections.ev.title}
                                     </h3>
                                     <p style={{ color: '#aaa', lineHeight: 1.6, marginBottom: '1.5rem' }}>
-                                        Turvallinen ja tehokas latausratkaisu kotiin ja taloyhtiöille. Dynaamisella kuormanhallinnalla.
+                                        {content.sections.ev.content.substring(0, 100)}...
                                     </p>
                                     <span className="service-link">Lue lisää →</span>
                                 </div>
@@ -89,7 +89,7 @@ const Home: React.FC = () => {
                         <a href="/heat-pumps" style={{ textDecoration: 'none' }}>
                             <div className="service-card">
                                 <div className="service-card-image" style={{
-                                    backgroundImage: 'url(https://images.unsplash.com/photo-1614631446501-abcf76949734?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80)',
+                                    backgroundImage: `url(${content.sections.ac.image || 'https://images.unsplash.com/photo-1614631446501-abcf76949734?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'})`,
                                     height: '200px',
                                     backgroundSize: 'cover',
                                     backgroundPosition: 'center',
@@ -97,10 +97,10 @@ const Home: React.FC = () => {
                                 }} />
                                 <div style={{ padding: '2rem' }}>
                                     <h3 style={{ color: 'var(--accent-color)', marginBottom: '1rem', fontSize: '1.5rem' }}>
-                                        Ilmalämpöpumput
+                                        {content.sections.ac.title}
                                     </h3>
                                     <p style={{ color: '#aaa', lineHeight: 1.6, marginBottom: '1.5rem' }}>
-                                        Asennus, huolto ja kunnossapito. Säästä lämmityskustannuksissa ja paranna sisäilman laatua.
+                                        {content.sections.ac.content.substring(0, 100)}...
                                     </p>
                                     <span className="service-link">Lue lisää →</span>
                                 </div>
@@ -167,16 +167,16 @@ const Home: React.FC = () => {
 
             <Section
                 data={content.sections.ev}
-                imageSrc="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                imageSrc={content.sections.ev.image || "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"}
             />
             <Section
                 data={content.sections.ac}
-                imageSrc="https://images.unsplash.com/photo-1614631446501-abcf76949734?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                imageSrc={content.sections.ac.image || "https://images.unsplash.com/photo-1614631446501-abcf76949734?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"}
                 reversed
             />
             <Section
                 data={content.sections.smartHome}
-                imageSrc="https://images.unsplash.com/photo-1558002038-1091a166111c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                imageSrc={content.sections.smartHome.image || "https://images.unsplash.com/photo-1558002038-1091a166111c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"}
             />
             <ContactForm />
             <Footer />

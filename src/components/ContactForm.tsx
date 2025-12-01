@@ -7,17 +7,38 @@ const ContactForm: React.FC = () => {
     const [formData, setFormData] = useState({ name: '', email: '', message: '' });
     const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setStatus('sending');
 
-        // Simulate sending email
-        setTimeout(() => {
-            console.log(`Email sent to ${content.contactEmail}`, formData);
-            setStatus('sent');
-            setFormData({ name: '', email: '', message: '' });
-            setTimeout(() => setStatus('idle'), 3000);
-        }, 1500);
+        const payload = {
+            name: formData.name,
+            email: formData.email,
+            message: formData.message,
+            timestamp: new Date().toISOString()
+        };
+
+        try {
+            const response = await fetch('https://default992b6348438747abb4411dcdfc58c8.88.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/63592b68592f45d1ae53ed5479c71f17/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=drRzWkvTKLp6BHPZ8a_4XKYaaX7XZH2phmbP_CV6u2Q', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(payload)
+            });
+
+            if (response.ok) {
+                setStatus('sent');
+                setFormData({ name: '', email: '', message: '' });
+                setTimeout(() => setStatus('idle'), 3000);
+            } else {
+                console.error('Failed to send message', response.statusText);
+                setStatus('error');
+            }
+        } catch (error) {
+            console.error('Error sending message:', error);
+            setStatus('error');
+        }
     };
 
     return (
@@ -45,10 +66,23 @@ const ContactForm: React.FC = () => {
                                         overflow: 'hidden'
                                     }}>
                                         {/* Placeholder for image */}
-                                        <span style={{ fontSize: '2rem', color: '#666' }}>?</span>
+                                        {(owner.imagePlaceholder.startsWith('/') || owner.imagePlaceholder.startsWith('data:')) ? (
+                                            <img
+                                                src={owner.imagePlaceholder}
+                                                alt={owner.name}
+                                                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                            />
+                                        ) : (
+                                            <span style={{ fontSize: '2rem', color: '#666' }}>
+                                                {owner.name.charAt(0)}
+                                            </span>
+                                        )}
                                     </div>
                                     <h4 style={{ color: '#fff' }}>{owner.name}</h4>
                                     <p style={{ color: '#888', fontSize: '0.9rem' }}>{owner.role}</p>
+                                    {owner.phone && <p style={{ color: '#ccc', fontSize: '0.9rem', marginTop: '0.5rem' }}>{owner.phone}</p>}
+                                    {owner.email && <p style={{ color: '#ccc', fontSize: '0.9rem' }}><a href={`mailto:${owner.email}`} style={{ color: 'inherit', textDecoration: 'none' }}>{owner.email}</a></p>}
+                                    {owner.address && <p style={{ color: '#888', fontSize: '0.8rem', marginTop: '0.5rem' }}>{owner.address}</p>}
                                 </div>
                             ))}
                         </div>

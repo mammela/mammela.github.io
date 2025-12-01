@@ -7,31 +7,40 @@ export const defaultContent: SiteContent = {
     },
     sections: {
         ev: {
-            id: "ev-chargers",
-            title: "Sähköautolataus Riihimäki",
-            content: "Sähköauton lataukseen tarkoitettu latauspiste on turvallinen valinta. Palvelemme Riihimäkeä ja lähialueita. Latauspiste on palo- ja henkilöturvallinen. Tavallinen pistorasia voi pitkäaikaisessa latauskäytössä vaurioitua tai jopa sulaa. Latauspisteen avulla varmistat, että akku on yön aikana latautunut täyteen."
+            id: "ev-charging",
+            title: "Sähköauton lataus",
+            content: "Kartoitamme kiinteistösi sähköverkon kapasiteetin ja asennamme turvalliset latausasemat avaimet käteen -periaatteella. Huomioimme tulevaisuuden tarpeet ja kuormanhallinnan.",
+            image: "/placeholder-1.png"
         },
         ac: {
-            id: "air-conditioners",
-            title: "Ilmalämpöpumput Riihimäki",
-            content: "Ilmalämpöpumpun asennus Riihimäellä ammattitaidolla. Ilmalämpöpumppu on erinomainen tapa säästää lämmityskustannuksissa ja viilentää kotiasi kesähelteillä. Tarjoamme asennukset ja huollot koko Riihimäen alueella. Kotitalouksissa ilmalämpöpumpun huolto kannattaa suorittaa säännöllisesti."
+            id: "heat-pumps",
+            title: "Ilmalämpöpumput",
+            content: "Asennamme ja huollamme ilmalämpöpumput ammattitaidolla. Oikein valittu ja asennettu pumppu säästää energiaa ja lisää asumismukavuutta ympäri vuoden.",
+            image: "/placeholder-2.png"
         },
         smartHome: {
-            id: "smart-home",
-            title: "Sähkötyöt Riihimäki",
-            content: "Kaikki sähkötyöt Riihimäellä ja lähialueilla. Sähköasennukset, valaistusratkaisut, saneeraukset ja huollot. Älykoti-automaatioratkaisut ja energiakonsultointi. Autamme sinua optimoimaan energiankulutuksesi ja tekemään asumisesta mukavampaa."
+            id: "electrical-work",
+            title: "Sähkötyöt",
+            content: "Teemme kaikki kodin ja kiinteistöjen sähkötyöt luotettavasti. Valaistus, pistorasiat, sähköremontit ja vikakorjaukset hoituvat kokeneelta ammattilaiselta.",
+            image: "/placeholder-3.png"
         }
     },
     owners: [
         {
-            name: "Omistaja 1",
-            role: "Perustaja",
-            imagePlaceholder: "owner1"
+            name: "Jani Lauttanen",
+            role: "Toimitusjohtaja",
+            email: "jani.lauttanen@basicelectric.fi",
+            phone: "050 406 4664",
+            address: "S2-urakoitsija",
+            imagePlaceholder: "/owner-1.png"
         },
         {
-            name: "Omistaja 2",
-            role: "Perustaja",
-            imagePlaceholder: "owner2"
+            name: "Joonas Mämmelä",
+            role: "Teknologianjohtaja",
+            email: "joonas.mammela@basicelectric.fi",
+            phone: "040 824 6119",
+            address: "S2-urakoitsija",
+            imagePlaceholder: "/owner-2.png"
         }
     ],
     contactEmail: "joonas.mammela@basicelectric.fi"
