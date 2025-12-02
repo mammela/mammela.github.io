@@ -45,7 +45,7 @@ const Header: React.FC = () => {
                         src="/logo.png"
                         alt="Basic Electric Logo"
                         style={{
-                            height: scrolled ? '40px' : '50px',
+                            height: scrolled ? '60px' : '80px',
                             width: 'auto',
                             transition: 'all 0.3s ease',
                             filter: 'drop-shadow(0 0 10px rgba(57, 255, 20, 0.3))'
@@ -58,7 +58,9 @@ const Header: React.FC = () => {
                     <Link to="/electrical-services" className="nav-link">Sähköpalvelut</Link>
                     <Link to="/ev-charging" className="nav-link">Lataus</Link>
                     <Link to="/heat-pumps" className="nav-link">Ilmalämpöpumput</Link>
-                    <a href="/#contact" className="btn btn-glow">Ota yhteyttä</a>
+                    <Link to="/automation" className="nav-link">Älykoti</Link>
+                    <Link to="/professionals" className="nav-link">Ammattilaisille</Link>
+                    <a href="#contact" onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }} className="btn btn-glow">Ota yhteyttä</a>
                 </nav>
 
                 {/* Mobile Menu Button */}
@@ -98,7 +100,9 @@ const Header: React.FC = () => {
                     <Link to="/electrical-services" onClick={() => setIsOpen(false)} className="mobile-nav-link">Sähköpalvelut</Link>
                     <Link to="/ev-charging" onClick={() => setIsOpen(false)} className="mobile-nav-link">Lataus</Link>
                     <Link to="/heat-pumps" onClick={() => setIsOpen(false)} className="mobile-nav-link">Ilmalämpöpumput</Link>
-                    <a href="/#contact" onClick={() => setIsOpen(false)} className="btn btn-glow" style={{ textAlign: 'center' }}>Ota yhteyttä</a>
+                    <Link to="/automation" onClick={() => setIsOpen(false)} className="mobile-nav-link">Älykoti</Link>
+                    <Link to="/professionals" onClick={() => setIsOpen(false)} className="mobile-nav-link">Ammattilaisille</Link>
+                    <a href="#contact" onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); setIsOpen(false); }} className="btn btn-glow" style={{ textAlign: 'center' }}>Ota yhteyttä</a>
                 </div>
             )}
 

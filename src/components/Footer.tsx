@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
                             }}
                         />
                         <p style={{ color: '#888', lineHeight: 1.6, marginBottom: '1rem' }}>
-                            Ammattitaitoista sähkötyötä Etelä-Suomessa. Sähköasennukset, ilmalämpöpumput ja sähköautolataus.
+                            Ammattitaitoista sähkötyötä Kanta-Hämeessä. Sähköasennukset, ilmalämpöpumput ja sähköautolataus.
                         </p>
                     </div>
 
@@ -74,7 +74,13 @@ const Footer: React.FC = () => {
                                 <Link to="/heat-pumps" className="footer-link">Ilmalämpöpumput</Link>
                             </li>
                             <li style={{ marginBottom: '0.75rem' }}>
-                                <a href="/#contact" className="footer-link">Ota yhteyttä</a>
+                                <Link to="/automation" className="footer-link">Älykoti</Link>
+                            </li>
+                            <li style={{ marginBottom: '0.75rem' }}>
+                                <Link to="/professionals" className="footer-link">Ammattilaisille</Link>
+                            </li>
+                            <li style={{ marginBottom: '0.75rem' }}>
+                                <a href="#contact" onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }} className="footer-link">Ota yhteyttä</a>
                             </li>
                         </ul>
                     </div>
@@ -103,7 +109,7 @@ const Footer: React.FC = () => {
                             </li>
                             <li style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                                 <MapPin size={18} color="var(--accent-color)" />
-                                <span style={{ color: '#888' }}>Etelä-Suomi</span>
+                                <span style={{ color: '#888' }}>Kanta-Häme</span>
                             </li>
                         </ul>
                     </div>

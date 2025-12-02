@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import Section from '../components/Section';
@@ -33,7 +34,7 @@ const Home: React.FC = () => {
                         Palvelumme
                     </h2>
                     <p style={{ textAlign: 'center', color: '#888', marginBottom: '4rem', fontSize: '1.1rem' }}>
-                        Ammattitaitoista sähkötyötä kaikissa tilanteissa
+                        Löydä oikea ratkaisu tarpeisiisi – me autamme toteutuksessa
                     </p>
 
                     <div style={{
@@ -42,7 +43,7 @@ const Home: React.FC = () => {
                         gap: '2rem'
                     }}>
                         {/* Service Card 1 */}
-                        <a href="/electrical-services" style={{ textDecoration: 'none' }}>
+                        <Link to="/electrical-services" style={{ textDecoration: 'none' }}>
                             <div className="service-card">
                                 <div className="service-card-image" style={{
                                     backgroundImage: `url(${content.sections.smartHome.image || 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'})`,
@@ -61,10 +62,10 @@ const Home: React.FC = () => {
                                     <span className="service-link">Lue lisää →</span>
                                 </div>
                             </div>
-                        </a>
+                        </Link>
 
                         {/* Service Card 2 */}
-                        <a href="/ev-charging" style={{ textDecoration: 'none' }}>
+                        <Link to="/ev-charging" style={{ textDecoration: 'none' }}>
                             <div className="service-card">
                                 <div className="service-card-image" style={{
                                     backgroundImage: `url(${content.sections.ev.image || 'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'})`,
@@ -83,10 +84,10 @@ const Home: React.FC = () => {
                                     <span className="service-link">Lue lisää →</span>
                                 </div>
                             </div>
-                        </a>
+                        </Link>
 
                         {/* Service Card 3 */}
-                        <a href="/heat-pumps" style={{ textDecoration: 'none' }}>
+                        <Link to="/heat-pumps" style={{ textDecoration: 'none' }}>
                             <div className="service-card">
                                 <div className="service-card-image" style={{
                                     backgroundImage: `url(${content.sections.ac.image || 'https://images.unsplash.com/photo-1614631446501-abcf76949734?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'})`,
@@ -105,7 +106,29 @@ const Home: React.FC = () => {
                                     <span className="service-link">Lue lisää →</span>
                                 </div>
                             </div>
-                        </a>
+                        </Link>
+
+                        {/* Service Card 4 */}
+                        <Link to="/automation" style={{ textDecoration: 'none' }}>
+                            <div className="service-card">
+                                <div className="service-card-image" style={{
+                                    backgroundImage: `url(${content.sections.automation.image || 'https://images.unsplash.com/photo-1558002038-1091a166111c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'})`,
+                                    height: '200px',
+                                    backgroundSize: 'cover',
+                                    backgroundPosition: 'center',
+                                    borderRadius: '10px 10px 0 0'
+                                }} />
+                                <div style={{ padding: '2rem' }}>
+                                    <h3 style={{ color: 'var(--accent-color)', marginBottom: '1rem', fontSize: '1.5rem' }}>
+                                        {content.sections.automation.title}
+                                    </h3>
+                                    <p style={{ color: '#aaa', lineHeight: 1.6, marginBottom: '1.5rem' }}>
+                                        {content.sections.automation.content.substring(0, 100)}...
+                                    </p>
+                                    <span className="service-link">Lue lisää →</span>
+                                </div>
+                            </div>
+                        </Link>
                     </div>
                 </div>
 
@@ -177,6 +200,11 @@ const Home: React.FC = () => {
             <Section
                 data={content.sections.smartHome}
                 imageSrc={content.sections.smartHome.image || "https://images.unsplash.com/photo-1558002038-1091a166111c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"}
+            />
+            <Section
+                data={content.sections.automation}
+                imageSrc={content.sections.automation.image || "https://images.unsplash.com/photo-1558002038-1091a166111c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"}
+                reversed
             />
             <ContactForm />
             <Footer />

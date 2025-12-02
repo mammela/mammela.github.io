@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
 
     return (
         <section style={{
-            height: '120vh',
+            height: '90vh',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -66,15 +66,15 @@ const Hero: React.FC = () => {
             }}>
                 {/* Logo with Glow Effect */}
                 <div className="animate-fade-in" style={{
-                    marginBottom: '3rem',
+                    marginBottom: '2rem',
                     animation: 'float 3s ease-in-out infinite'
                 }}>
                     <img
                         src="/logo.png"
                         alt="Basic Electric"
                         style={{
-                            maxWidth: '600px',
-                            width: '90%',
+                            maxWidth: '400px',
+                            width: '80%',
                             height: 'auto',
                             filter: 'drop-shadow(0 0 30px rgba(57, 255, 20, 0.6)) drop-shadow(0 0 60px rgba(57, 255, 20, 0.3))',
                             animation: 'pulse 4s ease-in-out infinite'

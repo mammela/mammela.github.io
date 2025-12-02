@@ -6,18 +6,24 @@ import Home from './pages/Home';
 import EVCharging from './pages/EVCharging';
 import ElectricalServices from './pages/ElectricalServices';
 import HeatPumps from './pages/HeatPumps';
+import Automation from './pages/Automation';
+import Professionals from './pages/Professionals';
 import AdminPanel from './components/AdminPanel';
+import ScrollToTop from './components/ScrollToTop';
 
 const App: React.FC = () => {
   return (
     <AuthProvider>
       <ContentProvider>
         <Router>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/ev-charging" element={<EVCharging />} />
             <Route path="/electrical-services" element={<ElectricalServices />} />
             <Route path="/heat-pumps" element={<HeatPumps />} />
+            <Route path="/automation" element={<Automation />} />
+            <Route path="/professionals" element={<Professionals />} />
             <Route path="/admin" element={<AdminPanel />} />
           </Routes>
         </Router>

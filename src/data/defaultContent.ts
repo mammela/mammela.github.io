@@ -2,27 +2,33 @@ import type { SiteContent } from '../types';
 
 export const defaultContent: SiteContent = {
     hero: {
-        title: "Sähköasentaja Riihimäki",
-        subtitle: "Ammattitaitoinen sähkömies ja sähköasentaja Riihimäellä. Sähköasennukset, ilmalämpöpumput ja sähköautolataus.",
+        title: "Sähköalan ratkaisut kotiisi ja yritykseesi",
+        subtitle: "Nopea apu ja kestävät ratkaisut: sähköasennukset, ilmalämpöpumput ja latausasemat Riihimäellä, Hyvinkäällä ja koko Kanta-Hämeessä.",
     },
     sections: {
         ev: {
             id: "ev-charging",
-            title: "Sähköauton lataus",
-            content: "Kartoitamme kiinteistösi sähköverkon kapasiteetin ja asennamme turvalliset latausasemat avaimet käteen -periaatteella. Huomioimme tulevaisuuden tarpeet ja kuormanhallinnan.",
+            title: "Lataa autosi turvallisesti",
+            content: "Kartoitamme kiinteistösi sähköverkon kapasiteetin ja asennamme turvalliset latausasemat avaimet käteen -periaatteella. Varmistamme, että lataus on tehokasta ja turvallista.",
             image: "/placeholder-1.png"
         },
         ac: {
             id: "heat-pumps",
-            title: "Ilmalämpöpumput",
-            content: "Asennamme ja huollamme ilmalämpöpumput ammattitaidolla. Oikein valittu ja asennettu pumppu säästää energiaa ja lisää asumismukavuutta ympäri vuoden.",
+            title: "Säästä energiaa ja paranna mukavuutta",
+            content: "Oikein valittu ilmalämpöpumppu säästää lämmityskuluissa ja viilentää kesähelteillä. Asennamme ja huollamme laitteet ammattitaidolla, jotta saat parhaan hyödyn.",
             image: "/placeholder-2.png"
         },
         smartHome: {
             id: "electrical-work",
-            title: "Sähkötyöt",
-            content: "Teemme kaikki kodin ja kiinteistöjen sähkötyöt luotettavasti. Valaistus, pistorasiat, sähköremontit ja vikakorjaukset hoituvat kokeneelta ammattilaiselta.",
+            title: "Kaikki sähkötyöt luotettavasti",
+            content: "Tarvitsetko pistorasian asennusta, valaistuksen uusimista tai laajempaa sähköremonttia? Hoidamme pienet ja suuret sähkötyöt huolellisesti ja sovitussa aikataulussa.",
             image: "/placeholder-3.png"
+        },
+        automation: {
+            id: "automation",
+            title: "Älykoti ja automaatio",
+            content: "Tee kodistasi älykäs Shelly-ratkaisuilla. Säästä energiaa automaattisella valaistuksella ja lämmityksen ohjauksella, paranna turvallisuutta ja hallitse kotiasi etänä – helposti ja kustannustehokkaasti.",
+            image: "/placeholder-4.png"
         }
     },
     owners: [
@@ -36,7 +42,7 @@ export const defaultContent: SiteContent = {
         },
         {
             name: "Joonas Mämmelä",
-            role: "Teknologianjohtaja",
+            role: "Kehitysjohtaja",
             email: "joonas.mammela@basicelectric.fi",
             phone: "040 824 6119",
             address: "S2-urakoitsija",

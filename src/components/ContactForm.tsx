@@ -4,7 +4,7 @@ import { Send } from 'lucide-react';
 
 const ContactForm: React.FC = () => {
     const { content } = useContent();
-    const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+    const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
     const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -14,6 +14,7 @@ const ContactForm: React.FC = () => {
         const payload = {
             name: formData.name,
             email: formData.email,
+            phone: formData.phone,
             message: formData.message,
             timestamp: new Date().toISOString()
         };
@@ -29,7 +30,7 @@ const ContactForm: React.FC = () => {
 
             if (response.ok) {
                 setStatus('sent');
-                setFormData({ name: '', email: '', message: '' });
+                setFormData({ name: '', email: '', phone: '', message: '' });
                 setTimeout(() => setStatus('idle'), 3000);
             } else {
                 console.error('Failed to send message', response.statusText);
@@ -122,6 +123,15 @@ const ContactForm: React.FC = () => {
                                     required
                                     value={formData.email}
                                     onChange={e => setFormData({ ...formData, email: e.target.value })}
+                                />
+                            </div>
+
+                            <div>
+                                <label style={{ display: 'block', marginBottom: '0.5rem', color: '#aaa' }}>Puhelinnumero</label>
+                                <input
+                                    type="tel"
+                                    value={formData.phone}
+                                    onChange={e => setFormData({ ...formData, phone: e.target.value })}
                                 />
                             </div>
 

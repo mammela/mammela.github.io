@@ -23,6 +23,7 @@ export interface SiteContent {
     ev: SectionContent;
     ac: SectionContent;
     smartHome: SectionContent;
+    automation: SectionContent;
   };
   owners: Owner[];
   contactEmail: string;
