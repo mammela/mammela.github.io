@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
 
     return (
         <section style={{
-            height: '90vh',
+            height: '100vh',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
