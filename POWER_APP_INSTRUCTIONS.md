@@ -19,6 +19,7 @@ Paste the following JSON into the sample payload box:
 {
     "name": "Matti Meikäläinen",
     "email": "matti.meikalainen@example.com",
+    "phone": "050 123 4567",
     "message": "Hei, haluaisin tarjouksen sähköauton latausaseman asennuksesta.",
     "timestamp": "2023-12-01T12:00:00.000Z"
 }
@@ -34,6 +35,9 @@ Click **Done**. Power Automate will generate a schema that looks something like 
             "type": "string"
         },
         "email": {
+            "type": "string"
+        },
+        "phone": {
             "type": "string"
         },
         "message": {
@@ -52,6 +56,7 @@ Now you can use the "Dynamic Content" from the trigger in subsequent steps (e.g.
 
 - **name**: The name of the sender.
 - **email**: The sender's email address.
+- **phone**: The sender's phone number.
 - **message**: The content of the message.
 - **timestamp**: The time the form was submitted.
 
