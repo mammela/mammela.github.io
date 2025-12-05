@@ -8,7 +8,7 @@ const Header: React.FC = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            setScrolled(window.scrollY > 20);
+            setScrolled(window.scrollY > 50);
         };
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
@@ -23,7 +23,8 @@ const Header: React.FC = () => {
             borderBottom: scrolled ? '2px solid var(--accent-color)' : '1px solid #333',
             backdropFilter: 'blur(10px)',
             transition: 'all 0.3s ease',
-            boxShadow: scrolled ? '0 4px 20px rgba(57, 255, 20, 0.1)' : 'none'
+            boxShadow: scrolled ? '0 4px 20px rgba(57, 255, 20, 0.1)' : 'none',
+            transform: scrolled ? 'translateY(0)' : 'translateY(-100%)'
         }}>
             <div className="container" style={{
                 display: 'flex',
