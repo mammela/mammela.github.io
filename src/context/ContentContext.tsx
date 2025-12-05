@@ -17,7 +17,16 @@ export const ContentProvider: React.FC<{ children: React.ReactNode }> = ({ child
         const storedContent = localStorage.getItem('site_content');
         if (storedContent) {
             try {
-                setContent(JSON.parse(storedContent));
+                const parsed = JSON.parse(storedContent);
+                // Merge with default content to ensure new fields are present
+                setContent({
+                    ...defaultContent,
+                    ...parsed,
+                    sections: {
+                        ...defaultContent.sections,
+                        ...(parsed.sections || {})
+                    }
+                });
             } catch (e) {
                 console.error("Failed to parse stored content", e);
             }
