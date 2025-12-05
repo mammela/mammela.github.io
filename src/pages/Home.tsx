@@ -202,7 +202,12 @@ const Home: React.FC = () => {
                 imageSrc={content.sections.smartHome?.image || "https://images.unsplash.com/photo-1558002038-1091a166111c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"}
             />
             <Section
-                data={content.sections.automation}
+                data={content.sections.automation || {
+                    id: "automation",
+                    title: "Älykoti ja automaatio",
+                    content: "Tee kodistasi älykäs Shelly-ratkaisuilla.",
+                    image: ""
+                }}
                 imageSrc={content.sections.automation?.image || "https://images.unsplash.com/photo-1558002038-1091a166111c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"}
                 reversed
             />
