@@ -308,12 +308,3 @@ img {
   height: auto;
   display: block;
 }
-
-img[loading="lazy"] {
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-img[loading="lazy"].loaded {
-  opacity: 1;
-}
