@@ -3,8 +3,11 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ContactForm from '../components/ContactForm';
 import { Smartphone, Zap, Shield, Wifi } from 'lucide-react';
+import { useContent } from '../context/ContentContext';
 
 const Automation: React.FC = () => {
+    const { content } = useContent();
+
     return (
         <>
             <Header />
@@ -17,7 +20,7 @@ const Automation: React.FC = () => {
                     alignItems: 'center',
                     justifyContent: 'center',
                     textAlign: 'center',
-                    backgroundImage: 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("https://images.unsplash.com/photo-1558002038-1091a166111c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80")',
+                    backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("${content.subsites.automation.hero}")`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center'
                 }}>
@@ -82,7 +85,7 @@ const Automation: React.FC = () => {
                             <div style={{ display: 'flex', alignItems: 'center', gap: '4rem', flexWrap: 'wrap' }}>
                                 <div style={{ flex: 1, minWidth: '300px' }}>
                                     <img
-                                        src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                                        src={content.subsites.automation.lighting}
                                         alt="Älykäs valaistus"
                                         style={{ width: '100%', borderRadius: '20px', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }}
                                     />
@@ -133,7 +136,7 @@ const Automation: React.FC = () => {
                                 </div>
                                 <div style={{ flex: 1, minWidth: '300px' }}>
                                     <img
-                                        src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                                        src={content.subsites.automation.heating}
                                         alt="Lämmityksen ohjaus"
                                         style={{ width: '100%', borderRadius: '20px', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }}
                                     />

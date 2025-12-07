@@ -3,8 +3,11 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ContactForm from '../components/ContactForm';
 import { Thermometer, Wind, Settings, CheckCircle } from 'lucide-react';
+import { useContent } from '../context/ContentContext';
 
 const HeatPumps: React.FC = () => {
+    const { content } = useContent();
+
     return (
         <>
             <Header />
@@ -17,7 +20,7 @@ const HeatPumps: React.FC = () => {
                     alignItems: 'center',
                     justifyContent: 'center',
                     textAlign: 'center',
-                    backgroundImage: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("https://images.unsplash.com/photo-1614631446501-abcf76949734?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80")',
+                    backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("${content.subsites.heatPumps.hero}")`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center'
                 }}>
@@ -101,7 +104,7 @@ const HeatPumps: React.FC = () => {
                         <div style={{ display: 'flex', gap: '4rem', flexWrap: 'wrap', alignItems: 'center' }}>
                             <div style={{ flex: 1, minWidth: '300px' }}>
                                 <img
-                                    src="https://images.unsplash.com/photo-1558002038-1091a166111c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                                    src={content.subsites.heatPumps.detail}
                                     alt="Ilmalämpöpumppu asennettuna"
                                     loading="lazy"
                                     style={{ width: '100%', borderRadius: '20px', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }}

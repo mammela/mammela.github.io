@@ -3,8 +3,11 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ContactForm from '../components/ContactForm';
 import { Lightbulb, Zap, Home, PenTool } from 'lucide-react';
+import { useContent } from '../context/ContentContext';
 
 const ElectricalServices: React.FC = () => {
+    const { content } = useContent();
+
     return (
         <>
             <Header />
@@ -17,7 +20,7 @@ const ElectricalServices: React.FC = () => {
                     alignItems: 'center',
                     justifyContent: 'center',
                     textAlign: 'center',
-                    backgroundImage: 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80")',
+                    backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("${content.subsites.electrical.hero}")`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center'
                 }}>
@@ -82,19 +85,19 @@ const ElectricalServices: React.FC = () => {
                     <div className="container">
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
                             <img
-                                src="https://images.unsplash.com/photo-1558402529-d2638a7023e9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                src={content.subsites.electrical.showcase1}
                                 alt="Sähköasentaja työssä"
                                 loading="lazy"
                                 style={{ width: '100%', height: '300px', objectFit: 'cover', borderRadius: '10px' }}
                             />
                             <img
-                                src="https://images.unsplash.com/photo-1565514020176-db7933f8206d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                src={content.subsites.electrical.showcase2}
                                 alt="Moderni valaistus"
                                 loading="lazy"
                                 style={{ width: '100%', height: '300px', objectFit: 'cover', borderRadius: '10px' }}
                             />
                             <img
-                                src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                src={content.subsites.electrical.showcase3}
                                 alt="Toimiston sähköistys"
                                 loading="lazy"
                                 style={{ width: '100%', height: '300px', objectFit: 'cover', borderRadius: '10px' }}

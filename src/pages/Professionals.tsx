@@ -3,8 +3,11 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ContactForm from '../components/ContactForm';
 import { Building, Stethoscope, Car, Handshake } from 'lucide-react';
+import { useContent } from '../context/ContentContext';
 
 const Professionals: React.FC = () => {
+    const { content } = useContent();
+
     return (
         <>
             <Header />
@@ -17,7 +20,7 @@ const Professionals: React.FC = () => {
                     alignItems: 'center',
                     justifyContent: 'center',
                     textAlign: 'center',
-                    backgroundImage: 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80")',
+                    backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("${content.subsites.professionals.hero}")`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center'
                 }}>

@@ -80,6 +80,12 @@ const Footer: React.FC = () => {
                                 <Link to="/professionals" className="footer-link">Ammattilaisille</Link>
                             </li>
                             <li style={{ marginBottom: '0.75rem' }}>
+                                <Link to="/work-process" className="footer-link">Työn kulku</Link>
+                            </li>
+                            <li style={{ marginBottom: '0.75rem' }}>
+                                <Link to="/prices" className="footer-link">Hinnasto</Link>
+                            </li>
+                            <li style={{ marginBottom: '0.75rem' }}>
                                 <a href="#contact" onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }} className="footer-link">Ota yhteyttä</a>
                             </li>
                         </ul>

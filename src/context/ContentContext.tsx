@@ -25,6 +25,13 @@ export const ContentProvider: React.FC<{ children: React.ReactNode }> = ({ child
                     sections: {
                         ...defaultContent.sections,
                         ...(parsed.sections || {})
+                    },
+                    subsites: {
+                        ev: { ...defaultContent.subsites.ev, ...(parsed.subsites?.ev || {}) },
+                        electrical: { ...defaultContent.subsites.electrical, ...(parsed.subsites?.electrical || {}) },
+                        heatPumps: { ...defaultContent.subsites.heatPumps, ...(parsed.subsites?.heatPumps || {}) },
+                        automation: { ...defaultContent.subsites.automation, ...(parsed.subsites?.automation || {}) },
+                        professionals: { ...defaultContent.subsites.professionals, ...(parsed.subsites?.professionals || {}) },
                     }
                 });
             } catch (e) {
