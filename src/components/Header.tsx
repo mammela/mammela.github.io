@@ -60,7 +60,6 @@ const Header: React.FC = () => {
                     <Link to="/ev-charging" className="nav-link">Lataus</Link>
                     <Link to="/heat-pumps" className="nav-link">Ilmalämpöpumput</Link>
                     <Link to="/automation" className="nav-link">Älykoti</Link>
-
                     <Link to="/professionals" className="nav-link">Ammattilaisille</Link>
                     <a href="#contact" onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }} className="btn btn-glow">Ota yhteyttä</a>
                 </nav>
@@ -103,7 +102,6 @@ const Header: React.FC = () => {
                     <Link to="/ev-charging" onClick={() => setIsOpen(false)} className="mobile-nav-link">Lataus</Link>
                     <Link to="/heat-pumps" onClick={() => setIsOpen(false)} className="mobile-nav-link">Ilmalämpöpumput</Link>
                     <Link to="/automation" onClick={() => setIsOpen(false)} className="mobile-nav-link">Älykoti</Link>
-
                     <Link to="/professionals" onClick={() => setIsOpen(false)} className="mobile-nav-link">Ammattilaisille</Link>
                     <a href="#contact" onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); setIsOpen(false); }} className="btn btn-glow" style={{ textAlign: 'center' }}>Ota yhteyttä</a>
                 </div>

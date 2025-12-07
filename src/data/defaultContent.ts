@@ -31,31 +31,6 @@ export const defaultContent: SiteContent = {
             image: "/placeholder-4.png"
         }
     },
-    subsites: {
-        ev: {
-            hero: "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
-            homeCharging: "https://images.unsplash.com/photo-1621255536412-421429402509?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
-            housingAssociation: "https://images.unsplash.com/photo-1565514020176-db7933f8206d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
-        },
-        electrical: {
-            hero: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
-            showcase1: "https://images.unsplash.com/photo-1558402529-d2638a7023e9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-            showcase2: "https://images.unsplash.com/photo-1565514020176-db7933f8206d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-            showcase3: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-        },
-        heatPumps: {
-            hero: "https://images.unsplash.com/photo-1614631446501-abcf76949734?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
-            detail: "https://images.unsplash.com/photo-1558002038-1091a166111c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
-        },
-        automation: {
-            hero: "https://images.unsplash.com/photo-1558002038-1091a166111c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
-            lighting: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
-            heating: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
-        },
-        professionals: {
-            hero: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80"
-        }
-    },
     owners: [
         {
             name: "Jani Lauttanen",

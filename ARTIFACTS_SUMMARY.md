@@ -67,18 +67,13 @@
 
 ### 3. Content Integration from basicelectric.fi
 
-#### EV Charging Content
-**Source:** https://basicelectric.fi/saumlhkoumlautolataus.html
-
 **Integrated Content:**
 - "Sähköauton lataukseen tarkoitettu latauspiste on turvallinen valinta. Se on palo- ja henkilöturvallinen."
 - "Tavallinen pistorasia voi pitkäaikaisessa latauskäytössä vaurioitua tai jopa sulaa sekä aiheuttaa henkilövahinkoja."
 - "Latauspisteen avulla varmistat, että akku on yön aikana latautunut täyteen."
 
-**Attribution:** Link displayed on page with "Lähde: Basic Electric Oy"
+**Attribution:** Link displayed on page with ""
 
-#### Heat Pump Content
-**Source:** https://basicelectric.fi/ilmalaumlmpoumlpumput.html
 
 **Integrated Content:**
 - Maintenance intervals (4 years for homes, 1 year for businesses)

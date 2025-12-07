@@ -8,8 +8,6 @@ import ElectricalServices from './pages/ElectricalServices';
 import HeatPumps from './pages/HeatPumps';
 import Automation from './pages/Automation';
 import Professionals from './pages/Professionals';
-import WorkProcess from './pages/WorkProcess';
-import Prices from './pages/Prices';
 import AdminPanel from './components/AdminPanel';
 import ScrollToTop from './components/ScrollToTop';
 
@@ -26,8 +24,6 @@ const App: React.FC = () => {
             <Route path="/heat-pumps" element={<HeatPumps />} />
             <Route path="/automation" element={<Automation />} />
             <Route path="/professionals" element={<Professionals />} />
-            <Route path="/work-process" element={<WorkProcess />} />
-            <Route path="/prices" element={<Prices />} />
             <Route path="/admin" element={<AdminPanel />} />
           </Routes>
         </Router>

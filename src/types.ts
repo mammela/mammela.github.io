@@ -14,34 +14,6 @@ export interface Owner {
   address?: string;
 }
 
-export interface EVImages {
-  hero: string;
-  homeCharging: string;
-  housingAssociation: string;
-}
-
-export interface ElectricalImages {
-  hero: string;
-  showcase1: string;
-  showcase2: string;
-  showcase3: string;
-}
-
-export interface HeatPumpImages {
-  hero: string;
-  detail: string;
-}
-
-export interface AutomationImages {
-  hero: string;
-  lighting: string;
-  heating: string;
-}
-
-export interface ProfessionalsImages {
-  hero: string;
-}
-
 export interface SiteContent {
   hero: {
     title: string;
@@ -52,13 +24,6 @@ export interface SiteContent {
     ac: SectionContent;
     smartHome: SectionContent;
     automation: SectionContent;
-  };
-  subsites: {
-    ev: EVImages;
-    electrical: ElectricalImages;
-    heatPumps: HeatPumpImages;
-    automation: AutomationImages;
-    professionals: ProfessionalsImages;
   };
   owners: Owner[];
   contactEmail: string;

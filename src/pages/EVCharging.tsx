@@ -2,12 +2,9 @@ import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ContactForm from '../components/ContactForm';
-import { Shield, Zap, Home, Building2, Check } from 'lucide-react';
-import { useContent } from '../context/ContentContext';
+import { Shield, Zap, Home, Building2 } from 'lucide-react';
 
 const EVCharging: React.FC = () => {
-    const { content } = useContent();
-
     return (
         <>
             <Header />
@@ -20,7 +17,7 @@ const EVCharging: React.FC = () => {
                     alignItems: 'center',
                     justifyContent: 'center',
                     textAlign: 'center',
-                    backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("${content.subsites.ev.hero}")`,
+                    backgroundImage: 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("https://images.unsplash.com/photo-1593941707882-a5bba14938c7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80")',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center'
                 }}>
@@ -84,7 +81,7 @@ const EVCharging: React.FC = () => {
                             <div style={{ display: 'flex', alignItems: 'center', gap: '4rem', flexWrap: 'wrap' }}>
                                 <div style={{ flex: 1, minWidth: '300px' }}>
                                     <img
-                                        src={content.subsites.ev.homeCharging}
+                                        src="/placeholder-ev-charging.png"
                                         alt="Kotilataus"
                                         style={{ width: '100%', borderRadius: '20px', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }}
                                     />
@@ -137,65 +134,12 @@ const EVCharging: React.FC = () => {
                                     <div style={{ position: 'relative' }}>
                                         <Building2 size={64} color="var(--accent-color)" style={{ position: 'absolute', top: '-32px', right: '-32px', zIndex: 10, filter: 'drop-shadow(0 0 10px rgba(0,0,0,0.5))' }} />
                                         <img
-                                            src={content.subsites.ev.housingAssociation}
+                                            src="/placeholder-housing-association.png"
                                             alt="Taloyhtiölataus"
                                             style={{ width: '100%', borderRadius: '20px', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }}
                                         />
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* Installation Package Details */}
-                <section style={{ padding: '5rem 0', backgroundColor: '#121212' }}>
-                    <div className="container">
-                        <div style={{
-                            backgroundColor: '#1a1a1a',
-                            borderRadius: '20px',
-                            padding: '3rem',
-                            border: '1px solid #333',
-                            maxWidth: '900px',
-                            margin: '0 auto'
-                        }}>
-                            <h2 style={{ fontSize: '2rem', marginBottom: '2rem', color: '#fff', textAlign: 'center' }}>
-                                Defa Power 11kW asennus<br />
-                                <span style={{ color: 'var(--accent-color)', fontSize: '1.5rem' }}>latausaseman perusasennuspaketti 1790€ </span>
-                            </h2>
-
-                            <ul style={{ listStyle: 'none', padding: 0, display: 'grid', gap: '1rem' }}>
-                                {[
-                                    "Sähköinen etäkartoitus",
-                                    "Max. 50 ajokm ja laitteen perusasennukseen kuuluvat työtunnit",
-                                    "Max 10 metriä sähkökaapelia pinta-asennuksena sähkökeskukselta latausasemalle",
-                                    "Latausaseman asentamisen seinään",
-                                    "Tarvittavat kiinnitystarvikkeet",
-                                    "Vikavirtasuoja ja automaattinen johdonsuoja",
-                                    "Latausvirta säädettynä asennuskohteen mukaan",
-                                    "Latausaseman toiminnan varmistaminen",
-                                    "Latausaseman luovutus ja käytön opastus asiakkaalle",
-                                    "Takuu laitteelle ja asennukselle on 3 vuotta"
-                                ].map((item, index) => (
-                                    <li key={index} style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', color: '#ccc', fontSize: '1.1rem' }}>
-                                        <div style={{ marginTop: '5px', color: 'var(--accent-color)' }}>
-                                            <Check size={20} />
-                                        </div>
-                                        {item}
-                                    </li>
-                                ))}
-                            </ul>
-
-                            <div style={{ marginTop: '2rem', paddingTop: '2rem', borderTop: '1px solid #333', textAlign: 'center' }}>
-                                <p style={{ color: '#aaa', marginBottom: '1rem', fontStyle: 'italic' }}>
-                                    Asennuksen lisätyöt veloitetaan erikseen suoraan asiakkaalta ennalta sovitun kustannusarvion mukaisesti.
-                                </p>
-                                <p style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '0.5rem' }}>
-                                    Asennus 22kW <span style={{ color: 'var(--accent-color)', fontWeight: 'bold' }}>+300€ alkaen</span>
-                                </p>
-                                <p style={{ color: '#666', fontSize: '0.9rem' }}>
-                                    Hinnat voimassa toistaiseksi. Pidätämme oikeuden hinnanmuutoksiin.
-                                </p>
                             </div>
                         </div>
                     </div>
