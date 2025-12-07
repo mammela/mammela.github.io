@@ -66,15 +66,16 @@ const HeatPumps: React.FC = () => {
                                 <ul style={{ listStyle: 'none', padding: 0, color: '#ccc' }}>
                                     <li style={{ marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '10px' }}>
                                         <div style={{ width: '6px', height: '6px', backgroundColor: 'var(--accent-color)', borderRadius: '50%' }}></div>
-                                        <strong>09/25 sarja:</strong> 30-80 m²
+                                        <strong>MIDEA XTREME 9:</strong> 20 - 60 m²
                                     </li>
                                     <li style={{ marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '10px' }}>
                                         <div style={{ width: '6px', height: '6px', backgroundColor: 'var(--accent-color)', borderRadius: '50%' }}></div>
-                                        <strong>12/35 sarja:</strong> 40-120 m²
+
+                                        <strong>MIDEA XTREME 12:</strong> 40 - 100 m²
                                     </li>
                                     <li style={{ marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '10px' }}>
                                         <div style={{ width: '6px', height: '6px', backgroundColor: 'var(--accent-color)', borderRadius: '50%' }}></div>
-                                        <strong>18/50 sarja:</strong> 100-200 m²
+                                        <strong>MIDEA XTREME 24:</strong> 120 - 250 m²
                                     </li>
                                 </ul>
                             </div>

@@ -143,6 +143,57 @@ const Automation: React.FC = () => {
                     </div>
                 </section>
 
+                {/* Plejd & Shelly Integration */}
+                <section style={{ padding: '5rem 0', backgroundColor: '#121212' }}>
+                    <div className="container">
+                        <h2 style={{ fontSize: '2.5rem', textAlign: 'center', marginBottom: '3rem', color: '#fff' }}>
+                            Plejd & Shelly – Parhaat puolet molemmista
+                        </h2>
+                        <p style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 4rem auto', color: '#ccc', fontSize: '1.1rem' }}>
+                            Yhdistämällä Plejdin käyttäjäystävällisen valaistuksenohjauksen ja Shellyn monipuolisen automaation, saat kotiisi täydellisen ja joustavan älyjärjestelmän.
+                        </p>
+
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+                            {/* Plejd Card */}
+                            <div style={{ padding: '2rem', backgroundColor: '#1a1a1a', borderRadius: '15px', border: '1px solid #333' }}>
+                                <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: '#fff' }}>Plejd Valaistukseen</h3>
+                                <p style={{ color: '#aaa', marginBottom: '1rem' }}>
+                                    Plejd on markkinoiden suosituin valinta valaistuksen ohjaukseen. Se tarjoaa luotettavan himmennyksen, ajastukset ja langattomat painikkeet, jotka sopivat täydellisesti suomalaiseen kotiin.
+                                </p>
+                                <ul style={{ listStyle: 'none', padding: 0, color: '#ccc' }}>
+                                    <li style={{ marginBottom: '0.5rem' }}>• Täydellinen himmennys kaikille valaisimille</li>
+                                    <li style={{ marginBottom: '0.5rem' }}>• Langattomat painikkeet mihin tahansa</li>
+                                    <li style={{ marginBottom: '0.5rem' }}>• Toimii ilman internet-yhteyttä (Bluetooth)</li>
+                                </ul>
+                            </div>
+
+                            {/* Shelly Card */}
+                            <div style={{ padding: '2rem', backgroundColor: '#1a1a1a', borderRadius: '15px', border: '1px solid #333' }}>
+                                <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: '#fff' }}>Shelly Automaatioon</h3>
+                                <p style={{ color: '#aaa', marginBottom: '1rem' }}>
+                                    Shelly on voimanpesä, kun halutaan ohjata lämmitystä, seurata sähkönkulutusta tai luoda monimutkaisia automaatioita pörssisähkön hinnan perusteella.
+                                </p>
+                                <ul style={{ listStyle: 'none', padding: 0, color: '#ccc' }}>
+                                    <li style={{ marginBottom: '0.5rem' }}>• Pörssisähköohjaus lämmitykselle</li>
+                                    <li style={{ marginBottom: '0.5rem' }}>• Tarkka energiankulutuksen seuranta</li>
+                                    <li style={{ marginBottom: '0.5rem' }}>• Monipuoliset liitännät (WiFi, LAN)</li>
+                                </ul>
+                            </div>
+
+                            {/* Integration Card */}
+                            <div style={{ padding: '2rem', backgroundColor: '#1a1a1a', borderRadius: '15px', border: '1px solid #333' }}>
+                                <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: '#fff' }}>Yhdessä Vahvemmat</h3>
+                                <p style={{ color: '#aaa', marginBottom: '1rem' }}>
+                                    Käytä Plejdiä olohuoneen ja makuuhuoneiden tunnelmavalaistukseen, ja valjasta Shelly ohjaamaan lattialämmitystä ja lämminvesivaraajaa.
+                                </p>
+                                <p style={{ color: '#aaa' }}>
+                                    Näin saat molempien järjestelmien parhaat ominaisuudet käyttöösi ilman kompromisseja. Me suunnittelemme kokonaisuuden, joka toimii saumattomasti.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 <ContactForm />
                 <Footer />
             </div>

@@ -82,7 +82,13 @@ const ContactForm: React.FC = () => {
                                     <h4 style={{ color: '#fff' }}>{owner.name}</h4>
                                     <p style={{ color: '#888', fontSize: '0.9rem' }}>{owner.role}</p>
                                     {owner.phone && <p style={{ color: '#ccc', fontSize: '0.9rem', marginTop: '0.5rem' }}>{owner.phone}</p>}
-                                    {owner.email && <p style={{ color: '#ccc', fontSize: '0.9rem' }}><a href={`mailto:${owner.email}`} style={{ color: 'inherit', textDecoration: 'none' }}>{owner.email}</a></p>}
+                                    {owner.email && (
+                                        <p style={{ color: '#ccc', fontSize: '0.9rem' }}>
+                                            <a href={`mailto:${owner.email}`} style={{ color: 'inherit', textDecoration: 'none' }}>
+                                                {owner.email.split('@')[0]}<br />@{owner.email.split('@')[1]}
+                                            </a>
+                                        </p>
+                                    )}
                                     {owner.address && <p style={{ color: '#888', fontSize: '0.8rem', marginTop: '0.5rem' }}>{owner.address}</p>}
                                 </div>
                             ))}
